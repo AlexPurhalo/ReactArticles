@@ -63,7 +63,13 @@
         },
 
         hanldeSearch: function(event) {
-            console.log(event.target.value)
+            var searchQuery = event.target.value.toLowerCase(); // taking and transforming of input
+            var displayedArticles = ARTICLES.filter(function(el) {
+               var searchValue = el.title.toLowerCase(); // taking element's property and transforming to lowerCase
+               return searchValue.indexOf(searchQuery) !== -1; // returning of this element if this not false (means if true)
+            });
+
+            console.log(displayedArticles)
         },
 
         render: function() {
