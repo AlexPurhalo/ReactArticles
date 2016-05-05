@@ -69,7 +69,10 @@
                return searchValue.indexOf(searchQuery) !== -1; // returning of this element if this not false (means if true)
             });
 
-            console.log(displayedArticles)
+            // takes objects equal to state array
+            this.setState({
+                displayedArticles: displayedArticles
+            })
         },
 
         render: function() {
@@ -78,7 +81,7 @@
                     <ol>
                         <input type="text" className="search-field" placeholder="Enter Title" onChange={ this.hanldeSearch}/>
                         {
-                            ARTICLES.map(function(el){
+                            this.state.displayedArticles.map(function(el){ // to show data from state array
                                 return <Article
                                     key = { el.id }
                                     title = { el.title }
