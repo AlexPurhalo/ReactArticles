@@ -41,7 +41,22 @@
         render: function() {
             return (
                 <div>
-                    
+                    <ol>
+                        {
+                            ARTICLES.map(function(el){
+                                return(
+                                        <li>
+                                            <ul>
+                                                <li>{ el.title }</li>
+                                                <li>{ el.author }</li>
+                                                <li>{ el.description }</li>
+                                            </ul>
+                                            <br/>
+                                        </li>
+                                )
+                            })
+                        }
+                    </ol>
                 </div>
             )
         }
