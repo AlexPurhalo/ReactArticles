@@ -13,6 +13,10 @@ ol {
     list-style-type: none;
 }
 
+.main-div {
+    margin: 4em 0;
+}
+
 .articles {
     background-color: rgba(90, 225, 198, 0.23);
     padding: 1rem 2rem;
@@ -37,4 +41,11 @@ ol {
 .article-description {
     font-size: 1.6rem;
     color: dimgrey;
+}
+
+.search-field {
+    width: 1154px;
+    height: 60px;
+    text-align: center;
+    font-size: 1.8rem;
 }

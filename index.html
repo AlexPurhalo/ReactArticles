@@ -55,10 +55,15 @@
         }
     });
     var ArticlesList = React.createClass({
+        hanldeSearch: function(event) {
+            console.log(event.target.value)
+        },
+
         render: function() {
             return (
-                <div>
+                <div className="main-div">
                     <ol>
+                        <input type="text" className="search-field" placeholder="Enter Title" onChange={ this.hanldeSearch}/>
                         {
                             ARTICLES.map(function(el){
                                 return <Article
