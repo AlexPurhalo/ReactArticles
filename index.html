@@ -54,7 +54,14 @@
             )
         }
     });
+
     var ArticlesList = React.createClass({
+        getInitialState: function() {
+          return {
+              displayedArticles: ARTICLES
+          }
+        },
+
         hanldeSearch: function(event) {
             console.log(event.target.value)
         },
