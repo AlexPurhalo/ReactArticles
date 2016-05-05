@@ -8,4 +8,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 </head>
 <body>
+<!-- Tag that will be used for lor future data locating -->
+<div id="content"></div>
+
+<!-- Script with Babel type -->
+<script type="text/babel">
+
+    // Array with Objects
+    var ARTICLES = [
+        {
+            id: 1,
+            author: "Alex",
+            title: "Hello World",
+            description: "Hello world, my name is Alex i' commenting here :)"
+        },
+        {
+            id: 2,
+            author: "Blaha",
+            title: "Crash",
+            description: "me Baha and I'm going to destroy this fucking world via bomb"
+        },
+        {
+            id: 3,
+            author: "DanTrah",
+            title: "Some Title",
+            description: "I think enough!"
+        }
+    ]
+
+    // Component Definition
+    var ArticlesList = React.createClass({
+        render: function() {
+            return (
+                <div>
+                    
+                </div>
+            )
+        }
+    });
+
+    // Component Rendering
+    ReactDOM.render(
+            <ArticlesList />,
+            document.getElementById("content")
+    )
+</script>
 </body>
