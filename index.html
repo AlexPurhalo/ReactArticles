@@ -37,6 +37,20 @@
     ]
 
     // Component Definition
+    var Article = React.createClass({
+        render: function() {
+            return (
+                <li>
+                    <ol>
+                        <li>{ this.props.title }</li>
+                        <li>{ this.props.author }</li>
+                        <li>{ this.props.description }</li>
+                    </ol>
+                    <br/>
+                </li>
+            )
+        }
+    });
     var ArticlesList = React.createClass({
         render: function() {
             return (
@@ -44,16 +58,12 @@
                     <ol>
                         {
                             ARTICLES.map(function(el){
-                                return(
-                                        <li>
-                                            <ul>
-                                                <li>{ el.title }</li>
-                                                <li>{ el.author }</li>
-                                                <li>{ el.description }</li>
-                                            </ul>
-                                            <br/>
-                                        </li>
-                                )
+                                return <Article
+                                    key = { el.id }
+                                    title = { el.title }
+                                    author = { el.author }
+                                    description = { el.description }
+                                />;
                             })
                         }
                     </ol>
